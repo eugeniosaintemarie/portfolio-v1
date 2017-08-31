@@ -1,0 +1,68 @@
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/skel';
+
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	button,
+	.button {
+		border: solid 2px _palette(fg) !important;
+
+		&:hover {
+			border-color: _palette(accent1) !important;
+		}
+
+		&.special {
+			border: none !important;
+		}
+	}
+
+	.tiles {
+		article {
+			> .image {
+				&:before, &:after {
+					display: none;
+				}
+			}
+		}
+	}
+
+	#header {
+		.logo {
+			.symbol {
+				display: none;
+			}
+		}
+
+		nav {
+			ul {
+				li {
+					a[href="#menu"] {
+						text-indent: 0;
+						width: auto;
+						font-size: 0.8em;
+
+						&:before, &:after {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#footer {
+		> .inner {
+			section {
+				width: 50%;
+				margin-left: 3em;
+
+				&:first-child {
+					margin-left: 0;
+					width: 40%;
+				}
+			}
+		}
+	}
